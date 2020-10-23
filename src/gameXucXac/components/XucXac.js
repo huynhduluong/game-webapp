@@ -4,9 +4,9 @@ import { connect } from "react-redux";
 class XucXac extends Component {
   renderDice = () => {
     const { dice } = this.props;
-    return dice.map((item) => {
+    return dice.map((item, index) => {
       let linkImg = "./img/" + item + ".png";
-      return <img src={linkImg} className="xucXac" alt={item} />;
+      return <img src={linkImg} className="xucXac" alt={item} key={index} />;
     });
   };
   render() {
