@@ -7,7 +7,8 @@ class InfoGame extends Component {
     return (
       <div>
         <div className="display-4 ">
-          BẠN CHỌN: <span className="text-danger">{clientChoose}</span>
+          BẠN CHỌN:{" "}
+          <span className="text-danger">{clientChoose ? "tài" : "xỉu"}</span>
         </div>
         <div className="display-4 ">
           BÀN THẮNG: <span className="text-success">{countWin}</span>

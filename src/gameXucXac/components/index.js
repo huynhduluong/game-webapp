@@ -1,16 +1,15 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { actChooseGame } from "../modules/actions";
+import { actChooseGame, actPlayGame } from "../modules/actions";
 import "./index.css";
 import InfoGame from "./InfoGame";
 import XucXac from "./XucXac";
 
 class Home extends Component {
   render() {
-    const { handleChoose } = this.props;
+    const { handleChoose, handlePlayGame } = this.props;
     return (
       <div className="game">
-        <div className="container">
           <div className="title-name text-center mt-5 display-4">
             GAME ĐỔ XÚC XẮC
           </div>
@@ -19,7 +18,7 @@ class Home extends Component {
               <button
                 className="btnGame"
                 onClick={() => {
-                  handleChoose("tài");
+                  handleChoose(true);
                 }}
               >
                 TÀI
@@ -32,7 +31,7 @@ class Home extends Component {
               <button
                 className="btnGame"
                 onClick={() => {
-                  handleChoose("xỉu");
+                  handleChoose(false);
                 }}
               >
                 XỈU
@@ -42,10 +41,16 @@ class Home extends Component {
           <div className="text-center">
             <InfoGame />
 
-            <button className="btn btn-success mt-3 p-2">Play game</button>
+            <button
+              className="btn btn-success mt-3 p-2"
+              onClick={() => {
+                handlePlayGame();
+              }}
+            >
+              Play game
+            </button>
           </div>
         </div>
-      </div>
     );
   }
 }
@@ -54,6 +59,9 @@ const mapDispatchToProp = (dispatch) => {
   return {
     handleChoose: (choose) => {
       dispatch(actChooseGame(choose));
+    },
+    handlePlayGame: () => {
+      dispatch(actPlayGame());
     },
   };
 };

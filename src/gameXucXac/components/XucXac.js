@@ -10,7 +10,7 @@ class XucXac extends Component {
     });
   };
   render() {
-    return <div>{this.renderDice()}</div>;
+    return <div className="text-center">{this.renderDice()}</div>;
   }
 }
 
