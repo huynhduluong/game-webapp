@@ -41,6 +41,8 @@
     height: 80px;
 }
 
+
+
 .speech-bubble {
 	position: relative;
 	background: #00aabb;
@@ -65,6 +67,10 @@
 .btnItem{
     width: 75px;
     height: 75px;
+}
+
+.btnItem:focus{
+    outline: none;
 }
 
 .iconChoose{

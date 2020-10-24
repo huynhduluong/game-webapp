@@ -8,7 +8,6 @@ export default class GameOanTuTi extends Component {
   render() {
     return (
       <div className="game">
-        game oẳn tù tì
         <div className="row text-center text-white">
           <Player />
           <ResultGame />

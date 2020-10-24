@@ -1,14 +1,16 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
-export default class Computer extends Component {
+class Computer extends Component {
   render() {
+    const { computerChoose } = this.props;
     return (
       <div className="col-4">
         <div className="playerGame">
           <div className="theThink">
             <img
-              src="./img/rock.png"
-              alt="./img/rock.png"
+              src={computerChoose.img}
+              alt={computerChoose.img}
               className="iconThink"
             />
           </div>
@@ -19,3 +21,11 @@ export default class Computer extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    computerChoose: state.oanTuTiReducer.computerChoose,
+  };
+};
+
+export default connect(mapStateToProps, null)(Computer);
