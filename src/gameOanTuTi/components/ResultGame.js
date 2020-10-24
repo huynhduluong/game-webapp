@@ -7,7 +7,7 @@ class ResultGame extends Component {
     const { countGame, countWin, resultText, handlePlayGame } = this.props;
     return (
       <div className="col-4">
-        <div className="result display-4 mt-5">{resultText}</div>
+        <div className="result display-4 mt-5 result__text">{resultText}</div>
         <div className="text-success display-4">
           Số bàn thắng: <span className="text-warning">{countWin}</span>
         </div>

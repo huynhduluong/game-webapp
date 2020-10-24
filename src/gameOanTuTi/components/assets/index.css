@@ -81,5 +81,9 @@
 
 .bgAvenger{
     width: 100%;
-    margin-top: -75px;
+    margin-top: -50px;
+}
+
+.result__text{
+    min-height: 135px;
 }
