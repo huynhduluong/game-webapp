@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
-import Home from './gameXucXac/components';
+// import Home from './gameXucXac/components';
+import GameOanTuTi from './gameOanTuTi/components'
 
 function App() {
   return (
     <div>
-      <Home/>
+      {/* <Home/> */}
+      <GameOanTuTi />
     </div>
   );
 }
