@@ -10,7 +10,7 @@ import "./index.css";
 import InfoGame from "./InfoGame";
 import XucXac from "./XucXac";
 
-class Home extends Component {
+class GameXucXac extends Component {
   render() {
     const { handleChoose, handlePlayGame } = this.props;
     return (
@@ -82,4 +82,4 @@ const mapDispatchToProp = (dispatch) => {
   };
 };
 
-export default connect(null, mapDispatchToProp)(Home);
+export default connect(null, mapDispatchToProp)(GameXucXac);
