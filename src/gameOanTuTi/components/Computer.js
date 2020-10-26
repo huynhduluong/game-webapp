@@ -11,11 +11,11 @@ class Computer extends Component {
             <img
               src={computerChoose.img}
               alt={computerChoose.img}
-              className="iconThink"
+              className="img-fluid iconThink"
             />
           </div>
           <div className="speech-bubble"></div>
-          <img src="./img/thanos.png" alt="thanos" className="icon" />
+          <img src="./img/thanos.png" alt="thanos" className="img-fluid icon" />
         </div>
       </div>
     );

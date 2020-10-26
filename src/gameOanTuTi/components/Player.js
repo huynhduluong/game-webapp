@@ -19,7 +19,7 @@ class Player extends Component {
               handleChooseItem(item.ma);
             }}
           >
-            <img src={item.img} alt={item.img} className="iconChoose" />
+            <img src={item.img} alt={item.img} className="img-fluid iconChoose" />
           </button>
         </div>
       );
@@ -38,11 +38,11 @@ class Player extends Component {
                 return item.datCuoc === true;
               }).img}
               alt="./img/rock.png"
-              className="iconThink"
+              className="img-fluid iconThink"
             />
           </div>
           <div className="speech-bubble"></div>
-          <img src="./img/ironman.png" alt="ironman" className="icon" />
+          <img src="./img/ironman.png" alt="ironman" className="img-fluid icon" />
           <div className="row">{this.renderChoose()}</div>
         </div>
       </div>

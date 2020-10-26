@@ -1,4 +1,4 @@
-import { CHOOSE_GAME, PLAY_GAME } from "./constant";
+import { CHOOSE_GAME, PLAY_GAME, RANDOM_XUC_XAC } from "./constant";
 
 export const actChooseGame = (choose) => {
   return {
@@ -10,5 +10,11 @@ export const actChooseGame = (choose) => {
 export const actPlayGame = () => {
   return {
     type: PLAY_GAME,
+  };
+};
+
+export const actRandomXucXac = () => {
+  return {
+    type: RANDOM_XUC_XAC,
   };
 };

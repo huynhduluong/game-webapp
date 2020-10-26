@@ -1,10 +1,11 @@
-import { CHOOSE_GAME, PLAY_GAME } from "./constant";
+import { CHOOSE_GAME, PLAY_GAME, RANDOM_XUC_XAC } from "./constant";
 
 const initialState = {
   countWin: 0,
   countGame: 0,
   clientChoose: true,
   dice: [1, 1, 1],
+  resultGame: false,
 };
 
 const xucXacReducer = (state = initialState, actions) => {
@@ -13,12 +14,14 @@ const xucXacReducer = (state = initialState, actions) => {
       state.clientChoose = actions.payload;
       return { ...state };
     }
-    case PLAY_GAME: {
+    case RANDOM_XUC_XAC: {
       //đổ xúc xắc
       state.dice = state.dice.map((item) => {
         return Math.ceil(Math.random() * 6);
       });
-
+      return { ...state };
+    }
+    case PLAY_GAME: {
       //tính tổng xúc xắc
       let result = state.dice.reduce((sum, item) => {
         return (sum += item);
@@ -29,6 +32,7 @@ const xucXacReducer = (state = initialState, actions) => {
       if (gameResult === state.clientChoose) {
         state.countWin++;
       }
+      state.resultGame = gameResult;
 
       state.countGame++;
       return { ...state };

@@ -10,13 +10,25 @@ class XucXac extends Component {
     });
   };
   render() {
-    return <div className="text-center">{this.renderDice()}</div>;
+    return (
+      <div className="text-center">
+        {this.renderDice()}
+        <h3 style={{ fontSize: "20px" }}>
+          Kết quả:
+          <span className="text-secondary" >
+            {" "}
+            {this.props.resultGame ? "tài" : "xỉu"}{" "}
+          </span>
+        </h3>
+      </div>
+    );
   }
 }
 
 const mapStateToProps = (state) => {
   return {
     dice: state.xucXacReducer.dice,
+    resultGame: state.xucXacReducer.resultGame,
   };
 };
 

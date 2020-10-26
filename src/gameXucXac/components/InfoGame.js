@@ -6,14 +6,14 @@ class InfoGame extends Component {
     const { countGame, countWin, clientChoose } = this.props;
     return (
       <div>
-        <div className="display-4 ">
+        <div className=" infoText">
           BẠN CHỌN:{" "}
           <span className="text-danger">{clientChoose ? "tài" : "xỉu"}</span>
         </div>
-        <div className="display-4 ">
+        <div className="infoText">
           BÀN THẮNG: <span className="text-success">{countWin}</span>
         </div>
-        <div className="display-4 ">
+        <div className=" infoText">
           TỔNG SỐ BÀN CHƠI: <span className="text-primary">{countGame}</span>
         </div>
       </div>

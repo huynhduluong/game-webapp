@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { actChooseGame, actPlayGame } from "../modules/actions";
+import IconHome from "../../HomePage/IconHome";
+import {
+  actChooseGame,
+  actPlayGame,
+  actRandomXucXac,
+} from "../modules/actions";
 import "./index.css";
 import InfoGame from "./InfoGame";
 import XucXac from "./XucXac";
@@ -9,8 +14,9 @@ class Home extends Component {
   render() {
     const { handleChoose, handlePlayGame } = this.props;
     return (
-      <div className="game">
-          <div className="title-name text-center mt-5 display-4">
+      <div className="game_XucXac">
+        <div className="container-fluid">
+          <div className="title__XucXac text-center mt-5 display-4 ">
             GAME ĐỔ XÚC XẮC
           </div>
           <div className="row text-center">
@@ -38,7 +44,7 @@ class Home extends Component {
               </button>
             </div>
           </div>
-          <div className="text-center">
+          <div className="text-center ">
             <InfoGame />
 
             <button
@@ -51,6 +57,8 @@ class Home extends Component {
             </button>
           </div>
         </div>
+        <IconHome />
+      </div>
     );
   }
 }
@@ -61,7 +69,15 @@ const mapDispatchToProp = (dispatch) => {
       dispatch(actChooseGame(choose));
     },
     handlePlayGame: () => {
-      dispatch(actPlayGame());
+      let count = 0;
+      let randomXucXac = setInterval(() => {
+        dispatch(actRandomXucXac());
+        count++;
+        if (count > 20) {
+          clearInterval(randomXucXac);
+          dispatch(actPlayGame());
+        }
+      }, 100);
     },
   };
 };

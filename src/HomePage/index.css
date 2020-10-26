@@ -1,0 +1,59 @@
+@font-face{
+    font-family: 'fontGame';
+    src: url('./assets/font/Pony.ttf');
+}
+
+.homePage{
+    background-image: url('./assets/bgHome.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    font-family: fontGame;
+}
+
+.choose__Game{
+    width: 350px;
+    height: 350px;
+    margin: 50px 0 20px;
+}
+
+.btnChooseGame{
+    background: -webkit-gradient(linear, left top, left bottom, from #2b2180, to #1d08dd);
+    background: -webkit-linear-gradient( #2b2180, #1d08dd);
+    background: -o-linear-gradient( #2b2180, #1d08dd);
+    background: linear-gradient( #2b2180, #1d08dd);
+    color: white;
+}
+.title__home{
+    font-size: 50px;
+    height: 100px;
+    padding-top: 20px;
+    color: #df7143;
+}
+
+@media screen and (max-width: 1000px){
+    .choose__Game{
+        width: 300px;
+        height: 300px;
+        margin: 50px 0 20px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .choose__Game{
+        width: 250px;
+        height: 250px;
+        margin: 50px 0 20px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .choose__Game{
+        width: 200px;
+        height: 200px;
+        margin: 50px 0 20px;
+    }
+}

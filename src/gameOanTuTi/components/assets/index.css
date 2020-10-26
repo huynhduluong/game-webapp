@@ -2,7 +2,7 @@
     font-family: 'fontGame';
     src: url('./font/Pony.ttf');
 }
-.game{
+.game__OanTuTi{
     width: 100%;
     height: 100%;
     background: #000;
@@ -13,9 +13,7 @@
 .icon{
     width: 200px;
 }
-.result{
-    color: #fdbd33ea;
-}
+
 .playerGame{
     display: flex;
     flex-direction: column;
@@ -29,16 +27,16 @@
     justify-content:  center;
     border: 5px solid #00aabb;
     border-radius: 10px;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     background-color: white;
 }
 
 .iconThink{
     transform: rotate(-90deg);
-    width: 80px;
+    width: 50px;
     background-color: white;
-    height: 80px;
+    height: 50px;
 }
 
 
@@ -65,8 +63,8 @@
 }
 
 .btnItem{
-    width: 75px;
-    height: 75px;
+    width: 50px;
+    height: 50px;
 }
 
 .btnItem:focus{
@@ -74,8 +72,8 @@
 }
 
 .iconChoose{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-color: white;
 }
 
@@ -86,4 +84,27 @@
 
 .result__text{
     min-height: 135px;
+    color: #fdbd33ea;
+}
+.result__game{
+    font-size: 40px;
+}
+
+@media screen and (max-width: 768px){
+    .result__game{
+        font-size: 25px;
+    }
+    .bgAvenger{
+        width: 100%;
+        margin-top: 0px;
+    }
+    .result__text{
+        min-height: 85px;
+    }
+    .game__OanTuTi{
+        padding-top: 30px;
+    }
+    .title_ott{
+        padding-bottom: 30px;
+    }
 }
