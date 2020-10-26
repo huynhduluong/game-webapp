@@ -10,7 +10,7 @@ export default class HomePage extends Component {
           <div className="title__home">Web Game</div>
           <div className="row text-center">
             <div className="col-6">
-              <Link className="text-white" to="/game-xuc-xac">
+              <Link className="text-white" to="/game-webapp/game-xuc-xac">
                 <img
                   className="choose__Game"
                   src="./img/XucXacBgHome.jpg"
@@ -22,7 +22,7 @@ export default class HomePage extends Component {
               </Link>
             </div>
             <div className="col-6">
-              <Link className="text-white" to="/game-oan-tu-ti">
+              <Link className="text-white" to="/game-webapp/game-oan-tu-ti">
                 <img
                   className="choose__Game"
                   src="./img/OanTuTiBgHome.png"
