@@ -9,9 +9,9 @@ function App() {
   return (
     <BrowserRouter>
       <div>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/game-xuc-xac" component={GameXucXac} />
-        <Route path="/game-oan-tu-ti" component={GameOanTuTi} />
+        <Route exact path="/game-webapp" component={HomePage} />
+        <Route path="game-webapp/game-xuc-xac" component={GameXucXac} />
+        <Route path="game-webapp/game-oan-tu-ti" component={GameOanTuTi} />
       </div>
     </BrowserRouter>
   );
